@@ -1,0 +1,121 @@
+:root{
+    --main-color:#272b30
+}
+body{
+    background-color:var(--main-color);
+    font-family: "Nerko One", cursive;
+    color: white;
+}
+header{
+    background-image: url(../imgs/wraper.png);
+    background-position: center center;
+    background-size: cover;
+    height: 1vh;
+}
+.navbar{
+    background-color: rgb(52, 78, 194);
+    --bs-navbar-brand-color:white;
+    img{
+        width: 50px;
+    }
+    .nav-link{
+        --bs-nav-link-color:white ;
+    }
+}
+/* .col-lg-3{
+    display: none;
+} */
+
+#search{
+    background-color: rgb(52, 78, 194);
+    width: 0px;
+    display: none ;
+}
+#openSearch{
+    width:180px;
+}
+::placeholder { 
+    color: white !important;
+ }
+.cardGame{
+    border: 1px rgba(0, 0, 0, 0.479) solid;
+    filter: grayscale(0.7);
+    transition: all 0.7s;
+    transform: scale(0.9);
+    cursor: pointer;
+}
+.cardGame:hover{
+    filter:grayscale(0);
+    transform: scale(1);
+}
+.load{
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+}
+.loader {
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    z-index: 999;
+    background:
+      radial-gradient(farthest-side,#000 98%,#0000) 55% 20%/8px 8px no-repeat,  
+      #ffcc00;
+    box-shadow: 2px -6px 12px 0px inset rgba(0, 0, 0, 0.9);
+    animation: l4 .5s infinite steps(5) alternate;
+  }
+  @keyframes l4{ 
+      0% {clip-path: polygon(50% 50%,100%   0,100% 0,0 0,0 100%,100% 100%,100% 100%)}
+    100% {clip-path: polygon(50% 50%,100% 65%,100% 0,0 0,0 100%,100% 100%,100%  35%)}
+  }
+
+
+.loader2 {
+    width: 70px;
+    aspect-ratio: 4;
+    background: radial-gradient(circle closest-side,rgb(52, 78, 194) 90%,#0000) 0/calc(100%/3) 100% space;
+    clip-path: inset(0 0 0 140%);
+    animation: l1 2s steps(4) infinite,q 2s infinite;
+    position: absolute;
+    right: 40%;
+  }
+  @keyframes l1 {from{clip-path: inset(0 0 0 0)}}
+  @keyframes q {
+    to{right: 50%;}
+  }
+
+  @media (width<1000px) {
+    .loader2 {
+        width: 70px;
+        aspect-ratio: 4;
+        background: radial-gradient(circle closest-side,rgb(52, 78, 194) 90%,#0000) 0/calc(100%/3) 100% space;
+        clip-path: inset(0 0 0 140%);
+        animation: l1 2s steps(4) infinite,q 2s infinite;
+        position: absolute;
+        right: 15%;
+      }
+    
+  }
+
+
+
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--main-color); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(52, 78, 194); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: yellow; 
+}
