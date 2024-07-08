@@ -5,7 +5,7 @@ export class Ui{
              cartona+=`
                          <div class="col-lg-3">
            <div id="${data[i].id}" class="cardGame d-flex flex-column h-100 p-2 rounded-2 overflow-x-hidden">
-             <img src="${data[i].thumbnail}" class="object-fit-cover" alt="">
+             <img  src="${data[i].thumbnail}" class="object-fit-cover" alt="">
              <div class="d-flex justify-content-between py-2"><span>${data[i].title}</span> <button class="btn btn-info">free</button></div>
              <p class="pb-2 fs-6">${data[i].short_description.split(" ", 8)}</p><hr>
              <div class="d-flex justify-content-between align-items-baseline"><span>${data[i].genre}</span> <span>${data[i].platform}</span></div>

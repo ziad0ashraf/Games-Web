@@ -15,9 +15,10 @@
 <body class="overflow-x-hidden">
 
   
-  <section id="gamesSection" class="fw-lighter">
-    <header>
-    </header>
+  <main id="gamesSection" class="fw-lighter position-relative">
+
+    <header></header>
+
     <nav class="navbar navbar-expand-lg position-sticky top-0 z-2 m-3 w-75 m-auto rounded-4 shadow">
       <div class="container">
         <div class="h3 d-flex align-items-center gap-2"><img src="imgs/logo-sm.png" alt=""> GAME REVIEWS</div>
@@ -53,10 +54,15 @@
       <input id="search" type="search" placeholder="What type of game are you looking for?" class="form-control mt-4 rounded-4 border-0 text-white m-auto">  
     </div>
     <div class="games container text-center py-4 position-relative">
-      <div id="demo" class="row gy-1 gx-1">
-      </div>
+      <div id="demo" class="row gy-1 gx-1"></div>
     </div>
-  </section>
+
+    <goUp class="rounded-5 d-flex justify-content-center align-items-center">
+      <i class="fa-solid fa-arrow-up"></i>
+    </goUp>
+    
+  </main>
+  
   
   <div class="load position-fixed w-100 h-100 m-0 d-flex justify-content-center z-3 align-items-center"><span class="loader"></span><span class="loader2"></span></div>
 
@@ -68,7 +74,6 @@
     </div>
   </div>
 </section>
-
 
 
 

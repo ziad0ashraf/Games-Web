@@ -13,6 +13,10 @@ $('#openSearch').on('click', () => {
     })
 })
 
+$('goUp').on('click',()=>{
+    $('html').animate({scrollTop:0},1000)
+})
+
 
 
 
