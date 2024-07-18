@@ -3,9 +3,9 @@ export class Ui{
         let cartona="";
          for (let i = 0; i < data.length; i++) {
              cartona+=`
-                         <div class="col-lg-3">
+                         <div class="col-lg-3 animate__animated animate__fadeInDown">
            <div id="${data[i].id}" class="cardGame d-flex flex-column h-100 p-2 rounded-2 overflow-x-hidden">
-             <img  src="${data[i].thumbnail}" class="object-fit-cover" alt="">
+             <img src="${data[i].thumbnail}" class="object-fit-cover" alt="">
              <div class="d-flex justify-content-between py-2"><span>${data[i].title}</span> <button class="btn btn-info">free</button></div>
              <p class="pb-2 fs-6">${data[i].short_description.split(" ", 8)}</p><hr>
              <div class="d-flex justify-content-between align-items-baseline"><span>${data[i].genre}</span> <span>${data[i].platform}</span></div>
@@ -19,10 +19,10 @@ export class Ui{
      displayDetails(data){
       let cartona=""
         cartona+=`
-              <div class="col-lg-4">
+              <div class="col-lg-4 animate__animated animate__fadeInRight">
         <div><img src="${data.thumbnail}" alt=""></div>
       </div>
-      <div class="col-lg-8">
+      <div class="col-lg-8 animate__animated animate__fadeInRight">
         <h1 class="mb-3">title : <span>${data.title}</span></h1>
         <div class="mb-3">Category : <span class="bg-info p-1 rounded-3 text-black">${data.genre}</span></div>
         <div class="mb-3">Platform : <span class="bg-info p-1 rounded-3 text-black">${data.platform}</span></div>

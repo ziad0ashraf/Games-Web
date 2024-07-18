@@ -29,10 +29,14 @@ export class games{
         console.log(result);
         this.ui.displayGames(result)
         this.startEvent()
-        document.getElementById('search').addEventListener('keyup',function search(){
+        this.search(result)
+        document.querySelector('.load').classList.add('d-none')
+    }
+    search(result){
+        document.getElementById('search').addEventListener('keyup',()=>{
             let cartona="";
             for (let i = 0; i < result.length; i++) {
-                if (result[i].title.toLowerCase().includes(this.value.toLowerCase())) {
+                if (result[i].title.toLowerCase().includes(document.getElementById('search').value.toLowerCase())) {
                     cartona+=`
                     <div class="col-lg-3">
                     <div id="${result[i].id}" class="cardGame d-flex flex-column h-100 p-2 rounded-2 overflow-x-hidden">
@@ -45,10 +49,10 @@ export class games{
 
                             `        
                 }  
-           document.getElementById('demo').innerHTML= cartona          
+           document.getElementById('demo').innerHTML= cartona     
             }
+            this.startEvent()      
         })        
-        document.querySelector('.load').classList.add('d-none')
     }
     startEvent() {
         document.querySelectorAll(".cardGame").forEach((game) => {
